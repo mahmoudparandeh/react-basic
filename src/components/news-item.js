@@ -5,7 +5,7 @@ class NewsItem extends Component {
 
     render() {
         return (
-            <div className={'news_item'}>
+            <div className={'news-item'}>
                 <h2>{this.item.title}</h2>
                 <p>{this.item.feed}</p>
             </div>
