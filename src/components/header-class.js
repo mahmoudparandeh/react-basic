@@ -7,11 +7,14 @@ class Header extends Component {
         title: 'This is keywords you typed:',
         keywords: '',
         count: 0,
+        active: false,
     };
 
     inputChanged = (event) => {
+        const data = event.target.value
         this.setState({
-            keywords: event.target.value
+            keywords: event.target.value,
+            active: data.length > 0,
         });
     }
 
@@ -24,7 +27,7 @@ class Header extends Component {
     render() {
         return (
             <Fragment>
-                <header>
+                <header style={{background: this.state.active ? 'blue' : 'red'}}>
                     <div className={'logo'} onClick={() => console.log('I was clicked')}>Logo</div>
                     <input onChange={this.inputChanged}/>
                     <div>{this.state.title}</div>

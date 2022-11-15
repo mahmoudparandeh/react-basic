@@ -7,6 +7,7 @@ class News extends Component {
     render() {
         return (
             <Fragment>
+                {this.props.children}
                 <div>This is NEWS list</div>
                 {
                     this.news.map((data) => {

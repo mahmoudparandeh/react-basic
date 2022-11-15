@@ -13,7 +13,9 @@ class App extends Component {
         return (
             <React.Fragment>
                 <Header/>
-                <News news={this.state.news}/>
+                <News news={this.state.news}>
+                    <h1>khiar</h1>
+                </News>
             </React.Fragment>
         )
     }
